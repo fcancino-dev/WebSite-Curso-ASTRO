@@ -3,7 +3,15 @@
 // import Instagram from "../assets/instagram.svg";
 
 // const instagram = Instagram;
-import { IconMail, IconMapPin, IconPhone } from '@tabler/icons-react';
+import {
+  IconMail,
+  IconMapPin,
+  IconPhone,
+  IconBrandX,
+  IconBrandGithubFilled,
+  IconBrandFacebook,
+} from "@tabler/icons-react";
+import Social from "./Social.tsx";
 ---
 
 <footer class="bg-[#06024E]">
@@ -17,24 +25,18 @@ import { IconMail, IconMapPin, IconPhone } from '@tabler/icons-react';
           </p>
         </div>
         <ul class="space-y-2">
-            <li class="flex gap-2">
-                <IconMail stroke={2} />
-                <p>
-                    example@gmail.com
-                </p>
-            </li>
-            <li class="flex gap-2">
-                <IconMapPin/> 
-                <p>
-                     Av.100previva s/n
-                </p>
-            </li>
-            <li class="flex gap-2">
-                <IconPhone/>
-                <p>
-                    000-000-000
-                </p> 
-            </li>
+          <li class="flex gap-2">
+            <IconMail stroke={2} />
+            <p>example@gmail.com</p>
+          </li>
+          <li class="flex gap-2">
+            <IconMapPin />
+            <p>Av.100previva s/n</p>
+          </li>
+          <li class="flex gap-2">
+            <IconPhone />
+            <p>000-000-000</p>
+          </li>
         </ul>
       </div>
       <div class="space-y-3">
@@ -67,8 +69,27 @@ import { IconMail, IconMapPin, IconPhone } from '@tabler/icons-react';
     </div>
     <hr class="mb-[72px]" />
     <div>
-      &copy;{new Date().getFullYear()} YOUR LOGO. Con ❤️ para el mundo | Todo los
-      derechos reservados.
+      <div class="flex flex-col items-center gap-4">
+        <div class="flex gap-4">
+          <Social
+            icon={IconBrandX}
+            platform="x"
+            username="fcancino-dev/WebSite-Curso-ASTRO"
+          />
+          <Social
+            icon={IconBrandGithubFilled}
+            platform="facebook"
+            username="fcancino-dev/WebSite-Curso-ASTRO"
+          />
+          <Social
+            icon={IconBrandFacebook}
+            platform="github"
+            username="fcancino-dev/WebSite-Curso-ASTRO"
+          />
+        </div>
+        &copy;{new Date().getFullYear()} YOUR LOGO. Con ❤️ para el mundo | Todo los
+        derechos reservados.
+      </div>
     </div>
   </div>
 </footer>
