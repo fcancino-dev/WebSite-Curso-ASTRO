@@ -1,0 +1,31 @@
+---
+import { IconMenu2 } from '@tabler/icons-react';
+---
+<nav class=" ">
+  <div class="text-[20px] font-normal grid grid-cols-6 gap-10 lg:gap-20">
+    <a class="link" href="/">Inicio</a>
+    <a class="link" href="/capacitate">Capacítate</a>
+    <a class="link" href="/capacitate">Capacítate</a>
+    <a class="link" href="/capacitate">Capacítate</a>
+    <a class="link" href="/capacitate">Capacítate</a>
+    <!-- <a class="link" href="/blog">Blogs</a>
+    <a class="link" href="/posts">Posts</a> -->
+    <IconMenu2 stroke={3} className='w-9 h-9'/>
+  </div>
+</nav>
+
+<style>
+  a {
+  }
+  .link {
+    font-weight: 400;
+    transition-duration: 0.3s;
+    color: #fff6f6ab;
+    transition-property: color, background-color, border-color,
+      text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+  .link:hover {
+    color: #ffffff;
+  }
+</style>

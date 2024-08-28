@@ -1,0 +1,74 @@
+---
+// import Social from "./Social.astro";
+// import Instagram from "../assets/instagram.svg";
+
+// const instagram = Instagram;
+import { IconMail, IconMapPin, IconPhone } from '@tabler/icons-react';
+---
+
+<footer class="bg-[#06024E]">
+  <div class="flex flex-col py-[71px] px-[100px] text-center">
+    <div class="grid grid-cols-4">
+      <div class="flex flex-col gap-8 mb-[49px] text-start">
+        <div class="flex flex-col gap-2">
+          <h2 class="text-xl font-extrabold">YOUR LOGO</h2>
+          <p>
+            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero"
+          </p>
+        </div>
+        <ul class="space-y-2">
+            <li class="flex gap-2">
+                <IconMail stroke={2} />
+                <p>
+                    example@gmail.com
+                </p>
+            </li>
+            <li class="flex gap-2">
+                <IconMapPin/> 
+                <p>
+                     Av.100previva s/n
+                </p>
+            </li>
+            <li class="flex gap-2">
+                <IconPhone/>
+                <p>
+                    000-000-000
+                </p> 
+            </li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <h2 class="text-lg font-bold">Nosotros</h2>
+        <ul class="space-y-2">
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <h2 class="text-lg font-bold">Servicios</h2>
+        <ul class="space-y-2">
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+      </div>
+      <div class="space-y-3">
+        <h2 class="text-lg font-bold">Contactanos</h2>
+        <ul class="space-y-2">
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+          <li>Item</li>
+        </ul>
+      </div>
+    </div>
+    <hr class="mb-[72px]" />
+    <div>
+      &copy;{new Date().getFullYear()} YOUR LOGO. Con ❤️ para el mundo | Todo los
+      derechos reservados.
+    </div>
+  </div>
+</footer>

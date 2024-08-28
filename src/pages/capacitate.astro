@@ -1,0 +1,27 @@
+---
+import Layout from "../layouts/Layout.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
+---
+
+<Layout title="Capacítate">
+  <main
+    class="bg-cover w-full h-screen"
+    style="background-image: url(/src/assets/bg-1.jpg);"
+  >
+    <SectionLayout>
+      <div class="grid content-center h-screen">
+        <div
+          class="flex flex-col items-center gap-7 bg-[#2729a4c0] backdrop-blur-md pt-16 pb-[72px] px-12 mx-[200px]"
+        >
+          <div class="flex items-center gap-3 bg-[#0B056C] w-fit py-2 px-4">
+            <p class="bg-white w-2 h-2 rounded-full"></p>
+            <p class="text-2xl font-extrabold">Curso</p>
+          </div>
+          <h1 class="text-5xl font-extrabold text-center">
+            Curso de Capacitación de Desarrollo web con Python
+          </h1>
+        </div>
+      </div>
+    </SectionLayout>
+  </main>
+</Layout>
