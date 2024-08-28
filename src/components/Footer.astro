@@ -1,8 +1,4 @@
 ---
-// import Social from "./Social.astro";
-// import Instagram from "../assets/instagram.svg";
-
-// const instagram = Instagram;
 import {
   IconMail,
   IconMapPin,
@@ -12,6 +8,24 @@ import {
   IconBrandFacebook,
 } from "@tabler/icons-react";
 import Social from "./Social.tsx";
+
+const arrayIcons = [
+  {
+    icon: IconBrandX,
+    platform: "x",
+    username: "fcancino-dev/WebSite-Curso-ASTRO",
+  },
+  {
+    icon: IconBrandGithubFilled,
+    platform: "facebook",
+    username: "fcancino-dev/WebSite-Curso-ASTRO",
+  },
+  {
+    icon: IconBrandFacebook,
+    platform: "github",
+    username: "fcancino-dev/WebSite-Curso-ASTRO",
+  },
+];
 ---
 
 <footer class="bg-[#06024E]">
@@ -71,21 +85,15 @@ import Social from "./Social.tsx";
     <div>
       <div class="flex flex-col items-center gap-4">
         <div class="flex gap-4">
-          <Social
-            icon={IconBrandX}
-            platform="x"
-            username="fcancino-dev/WebSite-Curso-ASTRO"
-          />
-          <Social
-            icon={IconBrandGithubFilled}
-            platform="facebook"
-            username="fcancino-dev/WebSite-Curso-ASTRO"
-          />
-          <Social
-            icon={IconBrandFacebook}
-            platform="github"
-            username="fcancino-dev/WebSite-Curso-ASTRO"
-          />
+          {
+            arrayIcons.map((item) => (
+              <Social
+                icon={item.icon}
+                platform={item.platform}
+                username={item.username}
+              />
+            ))
+          }
         </div>
         &copy;{new Date().getFullYear()} YOUR LOGO. Con ❤️ para el mundo | Todo los
         derechos reservados.
