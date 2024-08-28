@@ -1,9 +1,14 @@
 ---
-
+interface Props {
+  background: string;
+}
+const { background } = Astro.props;
 ---
 
-<section class="max-w-screen-xl mx-auto p-4 w-full">
-  <slot>
-    <h2 class="text-xl uppercase">Section Example</h2>
-  </slot>
-</section>
+<div style={`background-color: ${background};`}>
+  <section class="max-w-screen lg:px-[100px] w-full mx-auto">
+    <slot>
+      <h2 class="text-xl uppercase">Section Example</h2>
+    </slot>
+  </section>
+</div>

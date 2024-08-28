@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
+import { Button } from "@/components/ui/button";
 ---
 
 <Layout title="Capacítate">
@@ -8,20 +9,107 @@ import SectionLayout from "../layouts/SectionLayout.astro";
     class="bg-cover w-full h-screen"
     style="background-image: url(/src/assets/bg-1.jpg);"
   >
-    <SectionLayout>
-      <div class="grid content-center h-screen">
+    <SectionLayout background="">
+      <div class="grid content-center h-screen lg:mx-[180px]">
         <div
-          class="flex flex-col items-center gap-7 bg-[#2729a4c0] backdrop-blur-md pt-16 pb-[72px] px-12 mx-[200px]"
+          class="flex flex-col items-center gap-7 bg-[#2729a4c0] backdrop-blur-md pt-16 pb-[72px] px-12 mx-[150px]"
         >
           <div class="flex items-center gap-3 bg-[#0B056C] w-fit py-2 px-4">
             <p class="bg-white w-2 h-2 rounded-full"></p>
-            <p class="text-2xl font-extrabold">Curso</p>
+            <p class="text-3xl font-extrabold">Curso</p>
           </div>
-          <h1 class="text-5xl font-extrabold text-center">
+          <h1 class="text-[60px] leading-tight font-extrabold text-center">
             Curso de Capacitación de Desarrollo web con Python
           </h1>
+          <div class="flex gap-7">
+            <Button size="lg"><p class="text-xl">Registrarse</p></Button>
+            <Button size="lg" variant="outline"
+              ><p class="text-xl">Ver temario</p>
+            </Button>
+          </div>
         </div>
       </div>
     </SectionLayout>
   </main>
+  <section class="bg-[#Fafafa] pb-[72px]">
+    <div class="flex justify-center">
+      <div
+        class="flex gap-32 text-black bg-[#F0F1FF] w-fit border-4 border-[#2729A4] py-8 px-14"
+      >
+        <div class="flex gap-16">
+          <div>
+            <p
+              class="text-xl text-[#857FE9] font-bold uppercase border-[#857FE9] border-b-2"
+            >
+              Inicio
+            </p>
+            <p class="text-lg font-medium">25/07/2024</p>
+          </div>
+          <div>
+            <p
+              class="text-xl text-[#857FE9] font-bold uppercase border-[#857FE9] border-b-2"
+            >
+              Fin
+            </p>
+            <p class="text-lg font-medium">25/07/2024</p>
+          </div>
+          <div>
+            <p
+              class="text-xl text-[#857FE9] font-bold uppercase border-[#857FE9] border-b-2"
+            >
+              Horario
+            </p>
+            <p class="text-lg font-medium">
+              Martes y jueves de 7:00 pm a 10:00 pm
+            </p>
+          </div>
+          <div>
+            <p
+              class="text-xl text-[#857FE9] font-bold uppercase border-[#857FE9] border-b-2"
+            >
+              Modalidad
+            </p>
+            <p class="text-lg font-medium">Virtual</p>
+          </div>
+        </div>
+        <div class="flex items-center">
+          <Button size="lg" variant="secondary"
+            ><p class="text-xl">Descargar Brochure</p></Button
+          >
+        </div>
+      </div>
+    </div>
+  </section>
+  <SectionLayout background="#2729A4">
+    <div class="flex justify-center gap-x-28">
+      <div class="flex flex-col gap-6 py-14">
+        <div class="flex flex-col gap-2">
+          <h2 class="text-[40px] font-bold text-white">Dirigido a</h2>
+          <div class="text-xl">
+            <li>Público en general con interés en el desarrollo web.</li>
+            <li>
+              Estudiantes o profesionales en ingeniería interesados en el
+              desarrollo de software.
+            </li>
+            <li>Investigadores con interés en el desarrollo web.</li>
+          </div>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h2 class="text-[40px] font-bold text-white">Dirigido a</h2>
+          <p class="text-xl">
+            A nombre de FABRICUM y del Departamento de Ingeniería de la PUCP.
+          </p>
+        </div>
+      </div>
+      <div class="border-l-8 border-[#06024E]">
+        <img src="/src/assets/image-1.png" alt="persona certificada" />
+      </div>
+    </div>
+  </SectionLayout>
+  <SectionLayout background="#FAFAFA">
+    <h2 class="flex justify-center text-black text-[40px] font-bold">
+      Registrate aqui!!
+    </h2>
+    <div></div>
+  </SectionLayout>
 </Layout>
