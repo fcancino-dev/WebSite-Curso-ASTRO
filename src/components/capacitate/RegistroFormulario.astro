@@ -1,0 +1,32 @@
+---
+// RegistroFormulario.astro
+const handleSubmit = async (event: { preventDefault: () => void; target: HTMLFormElement | undefined; }) => {
+  event.preventDefault();
+  const formData = new FormData(event.target);
+  
+  const response = await fetch('/api/register', {
+    method: 'POST',
+    body: formData,
+  });
+
+  if (response.ok) {
+    alert('¡Registro exitoso!');
+  } else {
+    alert('Hubo un error en el registro.');
+  }
+};
+---
+
+<form onsubmit={handleSubmit.toString()} class="max-w-md mx-auto p-4 bg-white shadow-md rounded">
+  <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Nombre:</label>
+  <input type="text" id="name" name="name" class="border p-2 mb-4 w-full" required />
+
+  <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Correo electrónico:</label>
+  <input type="email" id="email" name="email" class="border p-2 mb-4 w-full" required />
+
+  <label for="phone" class="block mb-2 text-sm font-medium text-gray-700">Teléfono:</label>
+  <input type="tel" id="phone" name="phone" class="border p-2 mb-4 w-full" />
+
+  <button type="submit" class="bg-blue-500 text-white py-2 px-4 rounded">Registrarse</button>
+</form>
+
