@@ -2,9 +2,10 @@
 import Layout from "../layouts/Layout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
 import { Button } from "@/components/ui/button";
-import  RegistroFormulario  from "../components/capacitate/RegistroFormulario.astro";
+import RegistroFormulario from "../components/capacitate/RegistroFormulario.astro";
 import ItemCurso from "@/components/capacitate/components/ItemCurso.astro";
 import ProgramaCurso from "@/components/capacitate/ProgramaCurso.astro";
+import SeccionConImagen from "@/components/capacitate/SeccionConImagen.astro";
 ---
 
 <Layout title="Capacítate">
@@ -21,7 +22,9 @@ import ProgramaCurso from "@/components/capacitate/ProgramaCurso.astro";
             <p class="bg-white w-2 h-2 rounded-full"></p>
             <p class="text-3xl lg:text-2xl font-bold">Curso</p>
           </div>
-          <h1 class="text-[60px] lg:text-[50px] leading-tight font-bold text-center">
+          <h1
+            class="text-[60px] lg:text-[50px] leading-tight font-bold text-center"
+          >
             Curso de Capacitación de Desarrollo web con Python
           </h1>
           <div class="flex gap-7">
@@ -37,7 +40,7 @@ import ProgramaCurso from "@/components/capacitate/ProgramaCurso.astro";
   <section class="bg-[#Fafafa] pb-[72px]">
     <div class="flex justify-center lg:mx-[100px]">
       <div
-        class="flex gap-32 lg:gap-20 text-black bg-[#F0F1FF] w-fit border-4 border-[#2729A4] py-8 px-14 "
+        class="flex gap-32 lg:gap-20 text-black bg-[#F0F1FF] w-fit border-4 border-[#2729A4] py-8 px-14"
       >
         <div class="flex gap-16">
           <div>
@@ -83,32 +86,13 @@ import ProgramaCurso from "@/components/capacitate/ProgramaCurso.astro";
       </div>
     </div>
   </section>
-  <SectionLayout background="#2729A4">
-    <div class="flex justify-center gap-x-28 lg:gap-x-10">
-      <div class="flex flex-col gap-6 py-14">
-        <div class="flex flex-col gap-2">
-          <h2 class="text-[40px] lg:text-4xl font-bold text-white">Dirigido a</h2>
-          <div class="text-xl lg:text-lg">
-            <li>Público en general con interés en el desarrollo web.</li>
-            <li>
-              Estudiantes o profesionales en ingeniería interesados en el
-              desarrollo de software.
-            </li>
-            <li>Investigadores con interés en el desarrollo web.</li>
-          </div>
-        </div>
-        <div class="flex flex-col gap-2">
-          <h2 class="text-[40px] lg:text-4xl font-bold text-white">Dirigido a</h2>
-          <p class="text-xl lg:text-lg">
-            A nombre de FABRICUM y del Departamento de Ingeniería de la PUCP.
-          </p>
-        </div>
-      </div>
-      <div class="border-l-8 border-[#06024E]">
-        <img src="/src/assets/image-1.png" alt="persona certificada" class="w-full h-full" />
-      </div>
-    </div>
-  </SectionLayout>
+  <SeccionConImagen
+    titulo="Dirigido a:"
+    orderimage=""
+    ordertext=""
+    image="/src/assets/image-1.png"
+    showcontent=""
+  />
   <SectionLayout background="#FAFAFA">
     <h2 class="flex justify-center text-black text-[44px] font-bold">
       Registrate aqui!!
@@ -118,16 +102,28 @@ import ProgramaCurso from "@/components/capacitate/ProgramaCurso.astro";
     </div>
   </SectionLayout>
   <SectionLayout background="#2729A4">
-   <div class="py-[72px] ">
-    <div class="space-y-32">
-      <div class="grid grid-cols-2 gap-[155px]">
-        <h2 class="text-[44px] font-bold">¿Por qué llevar el curso?</h2>
-        <p>Permitirá a los participantes conocer las herramientas más utilizadas para iniciarse en el campo del desarrollo web. La profundización y práctica de los tópicos impartidos en el curso brindarán al estudiante el acceso a un amplio mercado laboral como «Web Developer«; dentro y fuera del Perú.
-        </p>
+    <div class="py-[72px]">
+      <div class="space-y-32">
+        <div class="grid grid-cols-2 gap-[155px]">
+          <h2 class="text-[44px] font-bold">¿Por qué llevar el curso?</h2>
+          <p>
+            Permitirá a los participantes conocer las herramientas más
+            utilizadas para iniciarse en el campo del desarrollo web. La
+            profundización y práctica de los tópicos impartidos en el curso
+            brindarán al estudiante el acceso a un amplio mercado laboral como
+            «Web Developer«; dentro y fuera del Perú.
+          </p>
+        </div>
+        <ItemCurso />
       </div>
-      <ItemCurso/>
     </div>
-   </div>
   </SectionLayout>
   <ProgramaCurso />
+  <SeccionConImagen
+    titulo="¿Que mas debo hacer?"
+    orderimage="1"
+    ordertext="2"
+    showcontent="none"
+    image="/src/assets/image-1.png"
+  />
 </Layout>

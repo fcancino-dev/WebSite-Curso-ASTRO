@@ -1,0 +1,51 @@
+---
+import SectionLayout from "@/layouts/SectionLayout.astro";
+
+interface Props {
+  titulo: string;
+  image: string;
+  orderimage: string;
+  ordertext: string;
+  showcontent: string;
+}
+
+const {
+  titulo = "titulo",
+  orderimage,
+  ordertext,
+  image,
+  showcontent,
+} = Astro.props;
+---
+
+<SectionLayout background="#2729A4">
+  <div class="grid grid-cols-2 justify-center gap-x-28 lg:gap-x-10">
+    <div
+      class="flex flex-col gap-6 py-14 justify-center"
+      style={`order:  ${ordertext};`}
+    >
+      <div class="flex flex-col gap-3">
+        <h2 class="text-[40px] lg:text-4xl font-bold text-white">{titulo}</h2>
+        <div class="text-xl lg:text-lg">
+          <li>Público en general con interés en el desarrollo web.</li>
+          <li>
+            Estudiantes o profesionales en ingeniería interesados en el
+            desarrollo de software.
+          </li>
+          <li>Investigadores con interés en el desarrollo web.</li>
+        </div>
+      </div>
+      <div class="flex flex-col gap-2" style={`display: ${showcontent};`}>
+        <h2 class="text-[40px] lg:text-4xl font-bold text-white">
+          Certificación Digital
+        </h2>
+        <p class="text-xl lg:text-lg">
+          A nombre de FABRICUM y del Departamento de Ingeniería de la PUCP.
+        </p>
+      </div>
+    </div>
+    <div class="border-l-8 border-[#06024E]" style={`order:${orderimage};`}>
+      <img src={image} alt="imagen" class="w-full h-full" />
+    </div>
+  </div>
+</SectionLayout>
