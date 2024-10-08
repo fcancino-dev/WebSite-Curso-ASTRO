@@ -1,0 +1,33 @@
+---
+import CardPrecio from "./components/CardPrecio.astro";
+import SectionLayout from "@/layouts/SectionLayout.astro";
+---
+
+<SectionLayout background="#F0F1FF">
+  <div class="py-[80px]">
+    <div class="grid grid-cols-2">
+      <CardPrecio
+        backgroundcard="#FFFFFF"
+        colortext="#3133A0"
+        titulo="Inversión"
+        tituloprecio1="Público General"
+        precio1="800.00"
+        tituloprecio2="Comunidad PUCP*"
+        precio2="720.00"
+        showdescuento="none"
+        colorborder="#3133A0"
+      />
+      <CardPrecio
+        backgroundcard="#3133A0"
+        colortext=""
+        colorborder=""
+        titulo="Descuento"
+        tituloprecio1="Pronto pago público en general"
+        precio1="760.00"
+        tituloprecio2="Pronto pago comunidad PUCP*"
+        precio2="680.00"
+        showdescuento=""
+      />
+    </div>
+  </div>
+</SectionLayout>

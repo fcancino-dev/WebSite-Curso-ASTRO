@@ -1,12 +1,13 @@
 ---
 import SectionLayout from "@/layouts/SectionLayout.astro";
-import  Temario  from "./components/Temario"
+import Temario from "./components/Temario";
 ---
 
 <SectionLayout background="#F0F1FF">
-  <div class="py-[90px] ">
-    <h2 class="text-[44px] text-center text-black font-bold pb-8">Programa del Curso</h2>
-    <Temario client:only/>
+  <div class="py-[90px]">
+    <h2 class="text-[44px] text-center text-black font-bold pb-8">
+      Programa del Curso
+    </h2>
+    <Temario client:only="react" />
   </div>
 </SectionLayout>
-

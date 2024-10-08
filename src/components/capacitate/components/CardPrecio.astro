@@ -1,0 +1,62 @@
+---
+interface Props {
+  backgroundcard: string;
+  colortext: string;
+  titulo: string;
+  tituloprecio1: string;
+  precio1: string;
+  tituloprecio2: string;
+  precio2: string;
+  showdescuento: string;
+  colorborder: string;
+}
+
+const {
+  backgroundcard,
+  colortext,
+  titulo,
+  precio1,
+  precio2,
+  tituloprecio1,
+  tituloprecio2,
+  showdescuento,
+  colorborder,
+} = Astro.props;
+---
+
+<div
+  class="border-2 border-[#3133A0]"
+  style={`background-color: ${backgroundcard}; color:${colortext}`}
+>
+  <!-- <div> -->
+  <div
+    class="p-4 text-center border-b-2 text-5xl font-bold"
+    style={`border-color: ${colorborder};`}
+  >
+    <h2 class="">{titulo}</h2>
+  </div>
+  <div class="flex flex-col gap-8 p-8">
+    <!-- Primer precio  -->
+    <div class="flex flex-col gap-1">
+      <div class="flex justify-between text-xl font-semibold">
+        <p>{tituloprecio1}</p>
+        <p>S/{precio1}</p>
+      </div>
+      <p class="italic font-light" style={`display: ${showdescuento};`}>
+        El descuento de pronto pago aplica hasta el 06/07/2024
+      </p>
+    </div>
+
+    <!-- Segundo precio  -->
+    <div class="flex flex-col gap-1">
+      <div class="flex justify-between text-xl font-semibold">
+        <p>{tituloprecio2}</p>
+        <p>S/{precio2}</p>
+      </div>
+      <p class="italic font-light" style={`display: ${showdescuento};`}>
+        El descuento de pronto pago aplica hasta el 06/07/2024
+      </p>
+    </div>
+  </div>
+  <!-- </div> -->
+</div>
